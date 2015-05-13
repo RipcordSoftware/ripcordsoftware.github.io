@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="Ripcord Software Ltd">
+    <meta name="author" content="Ripcord Software Ltd">
+    <link rel="icon" href="favicon.ico">
+
+    <title>Ripcord Software Ltd</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="cover.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz' rel='stylesheet' type='text/css'>
+    
+    <style type="text/css">
+		.tooltip-inner { max-width: 110%; width: 110%; }
+    </style>
+  </head>
+
+  <body>
+
+    <div class="site-wrapper">
+
+      <div class="site-wrapper-inner">
+
+        <div class="cover-container">
+
+          <div class="masthead clearfix">
+            <div class="inner">
+              <h3 class="masthead-brand" style="font-family: 'Yanone Kaffeesatz'; font-size: 3.5em">Ripcord Software</h3>
+              <nav>
+                <ul class="nav masthead-nav">
+                  <li class="active"><a href="#">Home</a></li>
+                  <li><a id="contact"href="#" title="">Contact</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+
+          <div class="inner cover">
+            <h1 class="cover-heading">Design. Development. Consulting.</h1>
+            <!--<p class="lead">Specialists in big-data in-memory map/reduce database technology.</p>-->
+            <p class="lead" id="example">
+				Native:
+					<span data-toggle="tooltip" title="C++ 11 | Boost | Standard Library | GTK+ | Google Test">C++</span> <span style="opacity: 0.4">|</span>
+				Managed:
+					<span data-toggle="tooltip" title="WCF | WPF | Windows Forms | ASP.NET | ADO.NET | Entity Framework | Mono">C#</span> and
+					<span data-toggle="tooltip" title="NodeJS | Underscore | Mocha | EJS | V8 | JSAPI">JavaScript</span> <span style="opacity: 0.4">|</span>
+				Web: HTML and CSS <span style="opacity: 0.4">|</span>
+				Data: 
+					<span data-toggle="tooltip" title="CouchDB">NoSQL</span> and 
+					<span data-toggle="tooltip" title="SQL Server 2005/2008">SQL</span> <span style="opacity: 0.4">|</span>
+				OS: 
+					<span data-toggle="tooltip" title="Windows XP thru Windows Server 2012">Windows</span> and 
+					<span data-toggle="tooltip" title="CentOS | RHEL | Fedora | Debian | Ubuntu">Linux</span>
+			</p>
+          </div>
+
+          <div class="mastfoot">
+            <div class="inner">
+              <p>&copy; 2015 Ripcord Software Ltd</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+    
+    <a href="https://github.com/ripcordsoftware">
+		<img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png">
+	</a>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="assets/js/ie10-viewport-bug-workaround.js"></script>
+    
+    <script>
+		var tooltipTemplate = '<div class="tooltip" role="tooltip" style="font-size: large"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div>';
+		$(function () {
+			$('#contact').attr('title', 
+				'<div style="text-align: left">' +
+				'<div><span class="glyphicon glyphicon-phone-alt"></span>&nbsp;&nbsp;Phone<span style="opacity:0.4">:</span><a href="tel:447545225034">&nbsp;+44&nbsp;7545&nbsp;225034</a></div>' +
+				'<div><span class="glyphicon glyphicon-envelope"></span>&nbsp;&nbsp;Email<span style="opacity:0.4">:</span>&nbsp;<a href="mailto:craig@ripcordsoftware.com">craig@ripcordsoftware.com</a></div>' +
+				'<div><img src="http://g.twimg.com/twitter-bird-16x16.png"/>&nbsp;&nbspTwitter<span style="opacity:0.4">:</span>&nbsp;<a href="https://twitter.com/RipcordSoftware">@RipcordSoftware</a></div>' +
+				'</div>'
+			);
+			
+			$('[data-toggle="tooltip"]').each(function() { 
+				var title = $(this).attr('title'); 
+				title = title.replace(/\s\|\s/g, ' <span style="color:#990000; font-weight: bold">|</span> ');
+				$(this).attr('title', title); 
+			});
+			
+			var options = {html:true,delay:{show:200,hide:500},placement:'bottom',animation:true,template:tooltipTemplate};
+			$('[data-toggle="tooltip"]').tooltip(options);
+			$('#contact').tooltip($.extend({}, options, {delay:{hide:5000}}));
+		});
+	</script>
+    
+    <script type="text/javascript">
+	//<![CDATA[
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-873619-1']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+	//]]>
+	</script>
+  </body>
+</html>
